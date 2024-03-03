@@ -6,3 +6,9 @@
 
 # for work on in my project
     - src\Scripts\activate ----->(src)   
+
+
+# for github
+    -git init
+    -git add .
+    -git commit -m "message"

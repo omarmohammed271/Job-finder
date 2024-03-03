@@ -36,3 +36,9 @@ SQL INjection
 
 Software Engineer
 software-engineer slug
+
+
+Templates ==urls==> views ==Queryset==> Models ==SQL==> DataBase
+
+movie ====>lecture
+study from short videos

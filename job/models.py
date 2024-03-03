@@ -19,7 +19,7 @@ class Category(models.Model):
     
 def image_upload(instance,filename:str):
 
-    extension = filename.split['.'][1]
+    extension = filename.split('.')[1]
     return f'jobs/{instance.job_name}.{extension}'
 
 
