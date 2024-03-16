@@ -37,6 +37,7 @@ class Job(models.Model):
     job_type = models.CharField(max_length=50,choices=JOB_TYPE)
     salary = models.IntegerField()
     vacancy = models.IntegerField()
+    description = models.TextField()
     location = models.CharField(max_length=150)
     published_on = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
