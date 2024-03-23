@@ -12,3 +12,13 @@
     -git init
     -git add .
     -git commit -m "message"
+
+
+
+Apply Job:
+    -job ----->Many to Many -Many to One - One to One
+    -Name
+    -Email
+    -linkedin
+    -cv
+    -Cover Letter    

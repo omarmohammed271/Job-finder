@@ -50,5 +50,25 @@ class Job(models.Model):
     def save(self,*args, **kwargs):
         self.slug = slugify(self.job_name)
         super(Job,self).save(*args, **kwargs)  
+      
     
-    # how to write clean code
+def cv_upload(instance,filename:str):
+    extension = filename.split('.')[1]
+    return f'cv/{instance.name}.{extension}'
+class ApplyJob(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE)
+    name = models.CharField(max_length=250)
+    email = models.EmailField( max_length=254)
+    linkedin = models.URLField(max_length=400)
+    cv = models.FileField( upload_to=None, max_length=100)
+    cover_letter = models.TextField()
+
+    class Meta:
+        verbose_name =("ApplyJob")
+        verbose_name_plural =("ApplyJobs")
+
+    def __str__(self):
+        return self.name
+
+
+        
