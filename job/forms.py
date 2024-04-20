@@ -6,4 +6,4 @@ class ApplyForm(forms.ModelForm):
     class Meta:
         model = ApplyJob
         fields = '__all__'
-        exclude = 'job',
+        exclude = 'job','user'

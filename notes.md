@@ -42,3 +42,7 @@ Templates ==urls==> views ==Queryset==> Models ==SQL==> DataBase
 
 movie ====>lecture
 study from short videos
+
+
+
+

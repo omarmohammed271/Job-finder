@@ -48,3 +48,12 @@ projects 1
 programmer not  coder
 
 <!-- cv -----> multi keys values -->
+
+
+
+
+Analysis:
+    -Design DB (Core)
+    -Relations in DB
+    -from DB to Templates (reverse)
+    

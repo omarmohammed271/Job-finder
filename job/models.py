@@ -1,6 +1,7 @@
 from typing import Iterable
 from django.db import models
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -31,6 +32,7 @@ JOB_TYPE = (
 
 
 class Job(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     job_name = models.CharField(max_length=150)
     slug = models.SlugField(blank=True,null=True)
     category = models.ForeignKey(Category,  on_delete=models.CASCADE)
@@ -56,6 +58,7 @@ def cv_upload(instance,filename:str):
     extension = filename.split('.')[1]
     return f'cv/{instance.name}.{extension}'
 class ApplyJob(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     email = models.EmailField( max_length=254)
